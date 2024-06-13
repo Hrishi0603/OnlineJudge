@@ -16,11 +16,11 @@ def topics(request):
 
 
 def problems(request, topic_id):
-    topic = get_object_or_404(topic, id=topic_id)
-    problems = topic.problems.all()
+    topics_p = get_object_or_404(topic, id=topic_id)
+    problems_t = topics_p.problems.all()
     context = {
-        'topics':topics,
-        'problems':problems,
+        'topics_p':topics_p,
+        'problems_t':problems_t,
     }
     #return redirect('/question/')
 

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodeRED | Problems</title>
+    <title>CodeX | Problems</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
     <link rel="icon" href="favicon.png" />
@@ -11,10 +11,10 @@
     <h1>{{topic.name}}</h1>
 
     <ul>
-      {% for problem in problems %}
+      {% for problem in problems_t %}
 
         <li>
-            <a href="{% url 'questions' problem.id %}">{{problem.title}}</a>
+            <a href="{% url 'problems' problem.id %}">{{problem.title}}</a>
             <p>{{problem.statement}}</p>
         </li>
       

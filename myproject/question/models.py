@@ -3,7 +3,7 @@ from home.models import problem
 
 # Create your models here.
 class question(models.Model):
-    problem = models.ForeignKey(problem, on_delete=models.CASCADE, related_name='questions')
+    problem_q = models.ForeignKey(problem, on_delete=models.CASCADE, related_name='questions')
     statement = models.TextField()
 
 

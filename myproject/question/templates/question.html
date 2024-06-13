@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodeX | Question</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <h1>{{ problem.title }}</h1>
+    <p>{{ problem.description }}</p>
+    <h2>Submit Your Code</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'problems' problem.topic.id %}">Back to Problems</a>
+  </body>
+</html>
